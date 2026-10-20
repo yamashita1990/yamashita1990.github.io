@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>山下 俊平 | Shumpei Yamashita</title>
+<style>
+:root{--navy:#0f2544;--navy2:#183a63;--accent:#2f6fb0;--accent2:#4a90d9;--ink:#1a2433;--muted:#5c6a7d;--line:#e3e8ef;--bg:#f6f8fb;--white:#fff;}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:"Helvetica Neue","Hiragino Kaku Gothic ProN","Yu Gothic",YuGothic,Meiryo,sans-serif;color:var(--ink);background:var(--bg);line-height:1.8;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1040px;margin:0 auto;padding-left:24px;padding-right:24px}
+a{color:var(--accent);text-decoration:none}
+.hero{background:linear-gradient(135deg,var(--navy) 0%,var(--navy2) 60%,#1f4a7d 100%);color:#fff;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;right:-140px;top:-140px;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(74,144,217,.35),transparent 70%)}
+.eyebrow{letter-spacing:.28em;font-size:12px;font-weight:600;color:#9fc4ec;text-transform:uppercase;margin-bottom:14px}
+
+.hero-inner{display:flex;align-items:center;gap:52px;padding:74px 0;flex-wrap:wrap;position:relative;z-index:2}
+.photo{flex:0 0 258px;width:258px;height:298px;border-radius:14px;overflow:hidden;box-shadow:0 22px 50px rgba(0,0,0,.38);border:1px solid rgba(255,255,255,.14)}
+.photo img{width:100%;height:100%;object-fit:cover;object-position:top center;display:block}
+.hero-txt{flex:1;min-width:280px}
+.hero-txt h1{font-size:40px;font-weight:800;letter-spacing:.02em;line-height:1.2}
+.hero-txt .en{font-size:15px;color:#b9cfe6;letter-spacing:.14em;margin-top:6px;font-weight:500}
+.role{margin-top:16px;font-size:15px;color:#dbe7f4;font-weight:600}
+.role span{display:inline-block;background:rgba(255,255,255,.12);padding:5px 13px;border-radius:20px;font-size:13px;font-weight:600;letter-spacing:.03em}
+.catch{margin-top:24px;font-size:20px;font-weight:700;line-height:1.6;color:#fff;border-left:3px solid var(--accent2);padding-left:16px}
+.hero-cta{display:inline-flex;align-items:center;gap:8px;margin-top:26px;background:#4a90d9;color:#fff;font-weight:700;font-size:14.5px;letter-spacing:.03em;padding:13px 28px;border-radius:30px;box-shadow:0 10px 24px rgba(74,144,217,.35);transition:background .2s,transform .2s}
+.hero-cta:hover{background:#5ea0e6;transform:translateY(-2px);color:#fff}
+section{padding:58px 0}
+.sec-head{display:flex;align-items:baseline;gap:14px;margin-bottom:30px}
+.sec-head h2{font-size:24px;font-weight:800;color:var(--navy);letter-spacing:.02em}
+.sec-head .en{font-size:12px;letter-spacing:.2em;color:var(--accent);font-weight:600;text-transform:uppercase}
+.sec-head::after{content:"";flex:1;height:1px;background:var(--line)}
+.about p{font-size:16px;color:#37455a;max-width:820px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}
+.card{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:24px 22px;transition:transform .2s,box-shadow .2s}
+.card:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(15,37,68,.10)}
+.card .no{font-size:12px;font-weight:700;color:var(--accent);letter-spacing:.14em}
+.card h3{font-size:17px;font-weight:700;color:var(--navy);margin:8px 0 8px}
+.card p{font-size:14px;color:#5c6a7d}
+.metrics{background:var(--navy);border-radius:16px;padding:44px 28px;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:26px;color:#fff}
+.metric{text-align:center}
+.metric .num{font-size:40px;font-weight:800;color:#7fb6ec;letter-spacing:.01em;line-height:1.1}
+.metric .num small{font-size:20px;font-weight:700}
+.metric .lbl{font-size:13px;color:#c6d6e8;margin-top:8px;font-weight:500}
+.timeline{position:relative;padding-left:26px}
+.timeline::before{content:"";position:absolute;left:6px;top:6px;bottom:6px;width:2px;background:var(--line)}
+.tl{position:relative;padding:0 0 30px 8px}
+.tl:last-child{padding-bottom:0}
+.tl::before{content:"";position:absolute;left:-26px;top:5px;width:13px;height:13px;border-radius:50%;background:var(--accent);border:3px solid #fff;box-shadow:0 0 0 2px var(--accent)}
+.tl .yr{font-size:13px;font-weight:700;color:var(--accent);letter-spacing:.05em}
+.tl h3{font-size:17px;font-weight:700;color:var(--navy);margin:3px 0 6px}
+.tl p{font-size:14.5px;color:#4b5a70;max-width:760px}
+.acts{display:flex;flex-direction:column;gap:12px}
+.act{display:flex;align-items:flex-start;gap:14px;background:var(--white);border:1px solid var(--line);border-radius:10px;padding:18px 20px}
+.act .tag{flex:0 0 auto;font-size:11px;font-weight:700;letter-spacing:.08em;color:#fff;background:var(--accent);padding:4px 10px;border-radius:5px;margin-top:2px}
+.act .tag.write{background:var(--navy2)}
+.act .body h3{font-size:15.5px;font-weight:700;color:var(--ink)}
+.act .body p{font-size:13.5px;color:#6a7789;margin-top:3px}
+.navband{background:linear-gradient(135deg,#183a63,#2f6fb0);border-radius:16px;padding:40px 34px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;color:#fff}
+.navband h3{font-size:20px;font-weight:800}
+.navband p{font-size:14px;color:#dbe7f4;margin-top:6px}
+.navband a{flex:0 0 auto;background:#fff;color:#0f2544;font-weight:700;font-size:14.5px;padding:13px 28px;border-radius:30px;transition:transform .2s,box-shadow .2s}
+.navband a:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(0,0,0,.2)}
+.contact{background:var(--white);border:1px solid var(--line);border-radius:16px;padding:40px 34px;text-align:center}
+.contact h2{font-size:22px;font-weight:800;color:var(--navy)}
+.contact p{color:#5c6a7d;font-size:15px;margin:12px 0 22px}
+.btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.btn{display:inline-block;padding:12px 26px;border-radius:30px;font-weight:700;font-size:14px;letter-spacing:.03em}
+.btn.pri{background:var(--navy);color:#fff}
+.btn.pri:hover{background:var(--accent)}
+.btn.sec{background:#eef3f9;color:var(--navy);border:1px solid var(--line)}
+.btn.sec:hover{background:#e2ebf5}
+footer{text-align:center;padding:34px 0;color:#8a97a8;font-size:12.5px;letter-spacing:.05em}
+@media(max-width:640px){.hero-inner{padding:52px 0;gap:30px;justify-content:center;text-align:center}.photo{flex-basis:200px;width:200px;height:232px}.hero-txt h1{font-size:31px}.catch{font-size:17px;text-align:left}.sec-head{flex-wrap:wrap}section{padding:46px 0}.navband{padding:30px 24px}.navband a{width:100%;text-align:center}}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap hero-inner">
+    
+    <div class="hero-txt">
+      <div class="eyebrow">Inside Sales / Marketing Ops</div>
+      <h1>山下 俊平</h1>
+      <div class="en">Shumpei Yamashita</div>
+      <div class="role"><span>INTLOOP株式会社　マーケティングコミュニケーション本部　シニアアソシエイト</span></div>
+      <p class="catch">リードを、商談に変える。<br>13年の法人営業・インサイドセールス経験と、マーケティングオペレーションの両輪で、売上につながるパイプラインをつくります。</p>
+      <a href="skills.html" class="hero-cta">スキルアセット一覧を見る →</a>
+    </div>
+  </div>
+</header>
+<main>
+<section class="about wrap" id="about">
+  <div class="sec-head"><h2>プロフィール</h2><span class="en">About</span></div>
+  <p>2013年に株式会社NTTデータ・スマートソーシングでフィールドセールスとしてキャリアをスタートし、オフショアBPOやConcurを中心とした新規開拓で予算達成率120%を記録。2016年以降は、メール配信・MA・eラーニングなどのSaaS企業で一貫してインサイドセールスに従事してきました。カイロスマーケティング株式会社ではインサイドセールス組織をゼロから立ち上げ、セールスフロー・トークスクリプト・SQL基準の設計からメンバー採用までを担当。manebi株式会社ではチームマネジメントも担いながら、個人・チームともに商談目標を継続して上回ってきました。<br><br>セミナーの企画・登壇も得意としており、毎月1〜2回のペースで製品紹介セミナーの講師を務めたほか、「インサイドセールスの始め方」などのセミナーでも講師を担当。自治体向けのアウトバウンドでは、交付金の採択事業を調べて提案先を見極め、月70件の商談目標を上回っています。<br><br>現在はINTLOOP株式会社 マーケティングコミュニケーション本部にて、MQLからSQLへの転換、Account Engagementを活用したリードナーチャリング、Salesforce・SansanによるCRMデータ基盤の整備を担当。サイバーセキュリティ領域を中心に、大手企業へのアプローチ施策にも携わっています。</p>
+</section>
+<section class="wrap" id="strengths">
+  <div class="sec-head"><h2>専門・強み</h2><span class="en">Expertise</span></div>
+  <div class="cards"><div class="card"><div class="no">01</div><h3>インサイドセールス（SDR / BDR）</h3><p>反響型のSDRから、自治体・大手企業へのアウトバウンドまで。複数のSaaS企業で10年近く、商談目標を継続して上回ってきました。</p></div><div class="card"><div class="no">02</div><h3>IS組織の立ち上げ・マネジメント</h3><p>セールスフロー、トークスクリプト、SQL基準、フィールドセールスとの役割分担をゼロから設計。採用・育成・チーム運営まで担います。</p></div><div class="card"><div class="no">03</div><h3>MQL→SQL転換の仕組みづくり</h3><p>リードの見極め基準から、商談化までのフォロー設計、ナーチャリングによる掘り起こしまでを一体で設計します。</p></div><div class="card"><div class="no">04</div><h3>MA / CRM オペレーション</h3><p>Account Engagement・Salesforce・Sansanを横断したデータ設計と運用。マーケティングと営業が同じデータで動ける状態をつくります。</p></div><div class="card"><div class="no">05</div><h3>多様な商材での提案経験</h3><p>BPO、メール配信、MA、eラーニング、自治体向けのコワーキング事業まで。商材や相手が変わっても成果を出せる柔軟さが強みです。</p></div><div class="card"><div class="no">06</div><h3>セミナー企画・登壇</h3><p>毎月1〜2回のペースでセミナーに登壇。製品紹介からインサイドセールスのノウハウ解説まで、企画から登壇まで自身で担います。</p></div></div>
+</section>
+<section class="wrap" id="results">
+  <div class="sec-head"><h2>主な実績</h2><span class="en">Results</span></div>
+  <div class="metrics"><div class="metric"><div class="num">13<small>年</small></div><div class="lbl">法人営業・インサイドセールスの経験（2013年〜）</div></div><div class="metric"><div class="num">120<small>%</small></div><div class="lbl">予算達成率（2014・2015年度／フィールドセールス）</div></div><div class="metric"><div class="num">175<small>%</small></div><div class="lbl">個人商談目標の達成率（2019年度／目標20件に対し月35件以上）</div></div><div class="metric"><div class="num">78<small>件/月</small></div><div class="lbl">自治体向け商談獲得（月間目標70件）</div></div></div>
+</section>
+<section class="wrap" id="career">
+  <div class="sec-head"><h2>経歴</h2><span class="en">Career</span></div>
+  <div class="timeline"><div class="tl"><div class="yr">2013.04 – 2015.12</div><h3>株式会社NTTデータ・スマートソーシング　営業部（フィールドセールス）</h3><p>中国拠点のオフショアBPO、経費精算システム「Concur」と経費精算BPOの新規営業を担当。展示会出展やセミナーの企画・登壇、グループ会社向け勉強会の講師も務める。2014・2015年度は予算達成率120%（2015年度は売上目標6,000万円に対し7,200万円）。</p></div><div class="tl"><div class="yr">2016.01 – 2019.04</div><h3>エクスペリアンジャパン株式会社（現 チーターデジタル株式会社）　営業部（インサイドセールス）</h3><p>SDRとして、メール配信システム「MailPublisher」シリーズとMA「CCMP」の商談を創出。セミナー参加企業へのアプローチと過去接点企業へのナーチャリングを担当し、製品紹介セミナーの講師として月1〜2回登壇。3年間、商談目標を毎年達成。</p></div><div class="tl"><div class="yr">2019.05 – 2021.05</div><h3>カイロスマーケティング株式会社　営業部（インサイドセールス）</h3><p>MA「Kairos3」のインサイドセールスチームを立ち上げ。セールスフロー、トークスクリプト、SQL基準、フィールドセールスとの役割分担を設計し、メンバー採用にも参画。自社セミナー「インサイドセールスの始め方」の企画・講師を担当。個人で月20〜25件の目標に対し月30〜35件以上、チームでも目標を上回る商談を創出。</p></div><div class="tl"><div class="yr">2021.06 – 2024.10</div><h3>manebi株式会社　営業部（インサイドセールス）</h3><p>社員研修向けeラーニング「manebi」と派遣社員向け「派遣のミカタ」のインサイドセールスを担当し、チームマネジメントも担う。Salesforceを活用したリード管理・分析、セミナーの企画・登壇、営業プロセスの見直しを推進。4年間、個人・チームともに毎年商談目標を上回る。</p></div><div class="tl"><div class="yr">2025.01 –</div><h3>株式会社ATOMica　営業部（インサイドセールス／業務委託）</h3><p>自治体向けに、ソーシャルコワーキングスペースの開設・運営、創業支援、インターンプログラムのアウトバウンドセールスを担当。交付金の採択事業や自治体の長期計画を調べて提案先を選び、月70件の商談目標に対し月72〜78件を獲得。</p></div><div class="tl"><div class="yr">現職</div><h3>INTLOOP株式会社　マーケティングコミュニケーション本部　シニアアソシエイト</h3><p>インサイドセールスとマーケティングオペレーションを横断して担当。MQL→SQL転換、Account Engagementでのナーチャリング、Salesforce・SansanのCRMデータ整備、サイバーセキュリティ領域の大手企業向けアプローチ施策を推進。</p></div></div>
+</section>
+<section class="wrap" id="activity">
+  <div class="sec-head"><h2>登壇・発信</h2><span class="en">Speaking &amp; Writing</span></div>
+  <div class="acts"><div class="act"><span class="tag">登壇</span><div class="body"><h3>セミナー「インサイドセールスの始め方」講師</h3><p>カイロスマーケティング株式会社／インサイドセールス導入を検討する企業向けに、企画から運営・登壇までを担当</p></div></div><div class="act"><span class="tag">登壇</span><div class="body"><h3>MailPublisher・CCMP 製品紹介セミナー講師</h3><p>エクスペリアンジャパン株式会社／デモを交えた製品紹介とメールマーケティングの基礎を解説（月1〜2回）</p></div></div><div class="act"><span class="tag">登壇</span><div class="body"><h3>リード獲得・育成のためのセミナー企画・登壇</h3><p>manebi株式会社／営業ノウハウや業界動向をテーマにしたセミナーを主導</p></div></div><div class="act"><span class="tag">登壇</span><div class="body"><h3>Concur・BPOサービスのセミナー登壇／グループ会社向け勉強会講師</h3><p>株式会社NTTデータ・スマートソーシング／商品説明と営業トークのレクチャー</p></div></div></div>
+</section>
+<section class="wrap" id="skillnav">
+  <div class="navband">
+    <div><h3>対応できるスキル領域の一覧はこちら</h3>
+    <p>戦略から実行までの対応範囲をまとめています。</p></div>
+    <a href="skills.html">スキルアセット一覧を見る →</a>
+  </div>
+</section>
+</main>
+<footer>© 山下 俊平. All rights reserved.</footer>
+</body>
+</html>
